@@ -72,7 +72,7 @@ window.onload = function(){
     })
 
     submitBtn.addEventListener("click", function() {
-        if (answer.length >= 11) {
+        if (checkCompleteAnswer()) {
             const score = calculateScore(answer, TestList);
             alert("Congratulations! You scored " + score + "/10 !!!");
             
@@ -187,6 +187,7 @@ window.onload = function(){
         testMain.innerText = currentPage+") "+curTest.id
         pageText.innerHTML = currentPage+"/10"
 
+        console.log(curTest)
         c1.innerHTML = curTest.choice[1]
         c2.innerHTML = curTest.choice[2]
         c3.innerHTML = curTest.choice[3]
@@ -198,7 +199,6 @@ window.onload = function(){
 
         if (answer[currentPage]){
             allChoice[answer[currentPage]].style.border = "5px solid green"
-            allChoice[answer[currentPage]].style.backgroundColor = "green"
         }
 
         submitBtn.style.display = "block"

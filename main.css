@@ -20,7 +20,8 @@ video#video-background {
     object-fit: cover; /* Ensures the video covers the entire container */
     display: inline;
 }
-video#blackhole{
+video#blackhole{top: 0;
+    left: 0;
     display: none;
     z-index: -1;
     width: 100%;
